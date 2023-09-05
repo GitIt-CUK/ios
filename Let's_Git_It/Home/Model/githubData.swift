@@ -39,6 +39,7 @@ let parameters: [String: Any] = [
 //    }
 //}
 
+
 func fetchGitHubcontributions(for username: String) {
     let url = "https://api.github.com/users/gadisom/events"
 

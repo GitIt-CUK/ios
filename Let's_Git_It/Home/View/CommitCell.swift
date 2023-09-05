@@ -9,8 +9,6 @@ class CommitCell: UICollectionViewCell {
             }
 
             switch commitCount {
-            case 0:
-                backgroundColor = UIColor(hex: "#161C22")
             case 1:
                 backgroundColor = UIColor(hex: "#114429")
             case 2:
@@ -20,8 +18,7 @@ class CommitCell: UICollectionViewCell {
             case 4...:
                 backgroundColor = UIColor(hex: "#48D353")
             default:
-                backgroundColor = UIColor.clear
-            }
+                backgroundColor = UIColor(hex: "#161C22")            }
         }
     }
 }
