@@ -10,6 +10,21 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let loginVC = window?.rootViewController as? LoginVC {
+            loginVC.handleGitHubCallback(url: url)
+        }
+        return true
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            guard let loginVC = (window?.rootViewController as? UINavigationController)?.viewControllers.first as? LoginVC else {
+                return
+            }
+            loginVC.handleGitHubCallback(url: url)
+        }
+    }
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

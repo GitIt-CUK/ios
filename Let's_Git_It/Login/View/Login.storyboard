@@ -12,10 +12,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="Y6W-OH-hqX" customClass="LoginVC" customModule="Let_s_Git_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,9 +71,12 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Github로 로그인하기" cornerStyle="large">
                                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                                             <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
-                                                            <color key="baseForegroundColor" red="0.7254902124" green="0.4588235021" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="baseBackgroundColor" red="0.11129712301587302" green="0.11129712301587302" blue="0.11129712301587302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="baseBackgroundColor" red="0.7254902124" green="0.4588235021" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="loginWithGitHub:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cWw-SO-CK1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,8 +96,8 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="다른 계정으로 로그인하기" cornerStyle="large">
                                                             <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="16"/>
-                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" red="0.7254902124" green="0.4588235021" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="baseForegroundColor" red="0.7254902124" green="0.4588235021" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                 </subviews>
@@ -119,12 +122,12 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.13333332540000001" green="0.13333332540000001" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="7Y5-LE-gy3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="h59-6a-vdv"/>
                             <constraint firstItem="7Y5-LE-gy3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kFR-8m-pr8"/>
                             <constraint firstAttribute="trailing" secondItem="7Y5-LE-gy3" secondAttribute="trailing" id="seJ-un-OWZ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7Y5-LE-gy3" secondAttribute="bottom" id="wbZ-vE-uuO"/>
+                            <constraint firstAttribute="bottom" secondItem="7Y5-LE-gy3" secondAttribute="bottom" constant="34" id="wbZ-vE-uuO"/>
                         </constraints>
                     </view>
                 </viewController>

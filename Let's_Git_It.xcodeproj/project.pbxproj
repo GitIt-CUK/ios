@@ -15,6 +15,8 @@
 		FF6F08DC2A9FADAD0021DBCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6F08DA2A9FADAD0021DBCD /* LaunchScreen.storyboard */; };
 		FF6F08E72A9FBE9A0021DBCD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6F08E62A9FBE9A0021DBCD /* Font.swift */; };
 		FF6F08EB2AA049730021DBCD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6F08EA2AA049730021DBCD /* Login.storyboard */; };
+		FFAF5F072AAD5C9800D41BFE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF5F062AAD5C9800D41BFE /* LoginVC.swift */; };
+		FFAF5F092AAD5CAE00D41BFE /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF5F082AAD5CAE00D41BFE /* LoginData.swift */; };
 		FFCBEB572AA7444000B4134E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FFCBEB562AA7444000B4134E /* Alamofire */; };
 		FFCBEB5A2AA7446D00B4134E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FFCBEB592AA7446D00B4134E /* SwiftyJSON */; };
 		FFCBEB5C2AA744A700B4134E /* githubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBEB5B2AA744A700B4134E /* githubData.swift */; };
@@ -33,6 +35,8 @@
 		FF6F08DD2A9FADAD0021DBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF6F08E62A9FBE9A0021DBCD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FF6F08EA2AA049730021DBCD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FFAF5F062AAD5C9800D41BFE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FFAF5F082AAD5CAE00D41BFE /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		FFCBEB332AA064F500B4134E /* NanumSquareRoundOTFB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundOTFB.otf; sourceTree = "<group>"; };
 		FFCBEB342AA064F600B4134E /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		FFCBEB352AA064F600B4134E /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 		FFCBEB502AA72B2C00B4134E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FFAF5F062AAD5C9800D41BFE /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 		FFCBEB522AA72B3800B4134E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFAF5F082AAD5CAE00D41BFE /* LoginData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +354,8 @@
 			files = (
 				FF6F08E72A9FBE9A0021DBCD /* Font.swift in Sources */,
 				FF6F08D42A9FADAC0021DBCD /* ViewController.swift in Sources */,
+				FFAF5F092AAD5CAE00D41BFE /* LoginData.swift in Sources */,
+				FFAF5F072AAD5C9800D41BFE /* LoginVC.swift in Sources */,
 				FFCBEB5E2AA756FB00B4134E /* CommitData.swift in Sources */,
 				FF6F08D02A9FADAC0021DBCD /* AppDelegate.swift in Sources */,
 				FFCBEB602AA7597700B4134E /* CommitCell.swift in Sources */,

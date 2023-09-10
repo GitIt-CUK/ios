@@ -21,7 +21,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.isTranslucent = true
+        //navigationController?.navigationBar.barTintColor = UIColor(hex: "#222231")
+
         // 오늘로부터 102일 전 날짜부터 시작하여 배열을 채웁니다.
                let startDate = Calendar.current.date(byAdding: .day, value: -102, to: Date())!
                dates = generateDates(startDate: startDate, count: 102)
