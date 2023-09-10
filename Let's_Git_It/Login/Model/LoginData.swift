@@ -6,8 +6,13 @@
 //
 import Foundation
 import Alamofire
+import UIKit
+import SafariServices
 
 func sendAuthorizationCodeToServer(code: String) {
+    UserDefaults.standard.set(true, forKey: "isLoggedIn")
+    UserDefaults.standard.synchronize()
+    
     let serverURL = "https://localhost:8080/auth"  // 서버의 주소
     let parameters: [String: Any] = [
         "code": code
@@ -22,5 +27,23 @@ func sendAuthorizationCodeToServer(code: String) {
         case .failure(let error):
             print("Error: \(error)")
         }
+    }
+}
+func logout(_ controller: UIViewController) {
+    
+    // 2. 앱에서의 세션 데이터 제거
+    UserDefaults.standard.set(false, forKey: "isLoggedIn")
+    UserDefaults.standard.synchronize()
+    
+    // 3. 로그인 화면으로 돌아가기
+    controller.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+    
+    if let navigationController = controller.view.window?.rootViewController as? UINavigationController {
+        navigationController.popToRootViewController(animated: false)
+    }
+    
+    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+    if let loginVC = storyboard.instantiateViewController(identifier: "LoginVC") as? LoginVC {
+        controller.view.window?.rootViewController = loginVC
     }
 }

@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     var dates : [Date] = []
     var commitDataArray: [CommitData] = [] {

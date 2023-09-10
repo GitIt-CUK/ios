@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF65AF162AAE0823003F7269 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65AF152AAE0823003F7269 /* TabVC.swift */; };
+		FF65AF182AAE0913003F7269 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65AF172AAE0913003F7269 /* ProfileVC.swift */; };
 		FF6F08D02A9FADAC0021DBCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6F08CF2A9FADAC0021DBCD /* AppDelegate.swift */; };
 		FF6F08D22A9FADAC0021DBCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6F08D12A9FADAC0021DBCD /* SceneDelegate.swift */; };
 		FF6F08D42A9FADAC0021DBCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6F08D32A9FADAC0021DBCD /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF65AF152AAE0823003F7269 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		FF65AF172AAE0913003F7269 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		FF6F08CC2A9FADAC0021DBCD /* Let's_Git_It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's_Git_It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6F08CF2A9FADAC0021DBCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF6F08D12A9FADAC0021DBCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				FF6F08D32A9FADAC0021DBCD /* ViewController.swift */,
+				FF65AF152AAE0823003F7269 /* TabVC.swift */,
+				FF65AF172AAE0913003F7269 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF65AF162AAE0823003F7269 /* TabVC.swift in Sources */,
 				FF6F08E72A9FBE9A0021DBCD /* Font.swift in Sources */,
 				FF6F08D42A9FADAC0021DBCD /* ViewController.swift in Sources */,
 				FFAF5F092AAD5CAE00D41BFE /* LoginData.swift in Sources */,
@@ -360,6 +367,7 @@
 				FF6F08D02A9FADAC0021DBCD /* AppDelegate.swift in Sources */,
 				FFCBEB602AA7597700B4134E /* CommitCell.swift in Sources */,
 				FFCBEB5C2AA744A700B4134E /* githubData.swift in Sources */,
+				FF65AF182AAE0913003F7269 /* ProfileVC.swift in Sources */,
 				FF6F08D22A9FADAC0021DBCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

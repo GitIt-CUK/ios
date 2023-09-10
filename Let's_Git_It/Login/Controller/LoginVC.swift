@@ -9,9 +9,11 @@ import UIKit
 import SafariServices
 
 class LoginVC: UIViewController {
+    
     let clientID = "9323cc3c58d996fc1332"
     let redirectURI = "myapp://callback"
-        
+    var safariViewController: SFSafariViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,8 +25,9 @@ class LoginVC: UIViewController {
            
            // 2. SFSafariViewController를 사용하여 GitHub OAuth 페이지를 띄우기
            if let url = URL(string: authURL) {
-               let safariViewController = SFSafariViewController(url: url)
-               present(safariViewController, animated: true, completion: nil)
+            safariViewController = SFSafariViewController(url: url)
+               present(safariViewController!, animated: true, completion: nil)
+              // UIApplication.shared.open(url)
            }
        }
     func handleGitHubCallback(url: URL) {
@@ -32,8 +35,22 @@ class LoginVC: UIViewController {
               let code = components.queryItems?.first(where: { $0.name == "code" })?.value else {
             return
         }
-        sendAuthorizationCodeToServer(code : code)
+        
+        safariViewController?.dismiss(animated: true, completion: {
+            print("Received authorization code: \(code)")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            // TabBarController를 인스턴스화
+            if let tabBarController = storyboard.instantiateViewController(identifier: "TabVC") as? UITabBarController {
+                // 현재 윈도우의 루트 뷰 컨트롤러로 설정
+                self.view.window?.rootViewController = tabBarController
+                self.view.window?.makeKeyAndVisible()
+            }
+
+            sendAuthorizationCodeToServer(code: code)
+        })
     }
+
 
     
 
