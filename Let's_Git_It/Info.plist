@@ -20,16 +20,12 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Gwangyang Sunshine Bold(OTF)</string>
-		<string>Gwangyang Sunshine Regular(OTF)</string>
-		<string>NanumSquareRoundR.ttf</string>
-		<string>NanumSquareRoundB.ttf</string>
-		<string>NanumSquareRoundEB.ttf</string>
-		<string>NanumSquareRoundL.ttf</string>
-		<string>NanumSquareRoundOTFB.otf</string>
-		<string>NanumSquareRoundOTFEB.otf</string>
-		<string>NanumSquareRoundOTFL.otf</string>
-		<string>NanumSquareRoundOTFR.otf</string>
+		<string>NanumSquareNeoOTF-Bd.otf</string>
+		<string>NanumSquareNeoOTF-Eb.otf</string>
+		<string>NanumSquareNeoOTF-Hv.otf</string>
+		<string>NanumSquareNeoOTF-Lt.otf</string>
+		<string>NanumSquareNeoOTF-Rg.otf</string>
+		<string>BMJUA_otf.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
