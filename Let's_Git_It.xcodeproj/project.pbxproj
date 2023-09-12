@@ -36,6 +36,9 @@
 		FFD9BC372AB043E70020D059 /* NanumSquareNeoOTF-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC322AB043E60020D059 /* NanumSquareNeoOTF-Bd.otf */; };
 		FFD9BC382AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC332AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf */; };
 		FFD9BC3A2AB046090020D059 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9BC392AB046090020D059 /* ColorData.swift */; };
+		FFD9BC3C2AB0821D0020D059 /* box.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC3B2AB0821D0020D059 /* box.json */; };
+		FFD9BC3E2AB083420020D059 /* congratuations.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC3D2AB083420020D059 /* congratuations.json */; };
+		FFD9BC402AB0878A0020D059 /* tear.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC3F2AB0878A0020D059 /* tear.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		FFD9BC322AB043E60020D059 /* NanumSquareNeoOTF-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Bd.otf"; sourceTree = "<group>"; };
 		FFD9BC332AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Hv.otf"; sourceTree = "<group>"; };
 		FFD9BC392AB046090020D059 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
+		FFD9BC3B2AB0821D0020D059 /* box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = box.json; sourceTree = "<group>"; };
+		FFD9BC3D2AB083420020D059 /* congratuations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratuations.json; sourceTree = "<group>"; };
+		FFD9BC3F2AB0878A0020D059 /* tear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tear.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				FFD9BC232AAFF35C0020D059 /* randombox.json */,
+				FFD9BC3D2AB083420020D059 /* congratuations.json */,
+				FFD9BC3F2AB0878A0020D059 /* tear.json */,
+				FFD9BC3B2AB0821D0020D059 /* box.json */,
 				FFD9BC2A2AB0346C0020D059 /* selection.json */,
 				FFD9BC212AAFF2D50020D059 /* Json.swift */,
 				FFD9BC392AB046090020D059 /* ColorData.swift */,
@@ -361,7 +370,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD9BC3E2AB083420020D059 /* congratuations.json in Resources */,
 				FFD9BC2B2AB0346C0020D059 /* selection.json in Resources */,
+				FFD9BC402AB0878A0020D059 /* tear.json in Resources */,
 				FF6F08EB2AA049730021DBCD /* Login.storyboard in Resources */,
 				FF6F08DC2A9FADAD0021DBCD /* LaunchScreen.storyboard in Resources */,
 				FF6F08D92A9FADAD0021DBCD /* Assets.xcassets in Resources */,
@@ -373,6 +384,7 @@
 				FFD9BC382AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf in Resources */,
 				FFD9BC372AB043E70020D059 /* NanumSquareNeoOTF-Bd.otf in Resources */,
 				FFD9BC242AAFF35C0020D059 /* randombox.json in Resources */,
+				FFD9BC3C2AB0821D0020D059 /* box.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

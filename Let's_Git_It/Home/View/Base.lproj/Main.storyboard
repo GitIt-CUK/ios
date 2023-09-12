@@ -922,7 +922,7 @@
                                 <rect key="frame" x="19.666666666666657" y="158.33333333333334" width="353.66666666666674" height="511.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="selection"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="box"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLG-Bx-cVF">
@@ -970,8 +970,7 @@
                                             <fontDescription key="titleFontDescription" name="NanumSquareNeo-cBd" family="NanumSquare Neo OTF" pointSize="23"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="backBtn:" destination="5HB-bN-X9J" eventType="touchUpInside" id="Fi5-0H-ptV"/>
-                                            <action selector="backBtn:" destination="djR-1z-hce" eventType="touchUpInside" id="jQY-EE-Vug"/>
+                                            <action selector="repeatBtn:" destination="5HB-bN-X9J" eventType="touchUpInside" id="daV-wR-MvI"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elite ! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAB-AM-8UK">
@@ -992,9 +991,12 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
                                             <fontDescription key="titleFontDescription" name="NanumSquareNeo-cBd" family="NanumSquare Neo OTF" pointSize="23"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backBtn:" destination="5HB-bN-X9J" eventType="touchUpInside" id="o4t-0E-zry"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.62263015761048868" green="0.83921568627450982" blue="0.78654500210515021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.11928545811017328" green="0.16618505100422742" blue="0.20153587476657331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="aAB-AM-8UK" firstAttribute="centerX" secondItem="6gW-yh-INu" secondAttribute="centerX" id="04n-64-1BR"/>
                                     <constraint firstAttribute="trailing" secondItem="UG0-Do-KkJ" secondAttribute="trailing" id="79g-Qw-PIE"/>
@@ -1024,11 +1026,16 @@
                     </view>
                     <connections>
                         <outlet property="animationView" destination="dft-mO-cjQ" id="5gk-Vh-DBe"/>
+                        <outlet property="color1" destination="gZs-5b-5hQ" id="tQ2-T5-FUV"/>
+                        <outlet property="color2" destination="ink-Al-ORR" id="iXw-XO-RlW"/>
+                        <outlet property="color3" destination="6gW-yh-INu" id="Vu3-G9-Sze"/>
+                        <outlet property="color4" destination="5Lp-Ld-0jt" id="8l8-LH-djA"/>
+                        <outlet property="color5" destination="Jnp-Je-xbs" id="NXO-WD-l7h"/>
+                        <outlet property="gradeLabel" destination="aAB-AM-8UK" id="MFg-2t-yzE"/>
                         <outlet property="uiView" destination="nLG-Bx-cVF" id="YAj-YV-Zxg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Piz-Mv-HP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="djR-1z-hce" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4011" y="18"/>
         </scene>
