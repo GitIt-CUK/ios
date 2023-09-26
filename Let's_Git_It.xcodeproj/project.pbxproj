@@ -24,6 +24,8 @@
 		FFCBEB5C2AA744A700B4134E /* githubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBEB5B2AA744A700B4134E /* githubData.swift */; };
 		FFCBEB5E2AA756FB00B4134E /* CommitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBEB5D2AA756FB00B4134E /* CommitData.swift */; };
 		FFCBEB602AA7597700B4134E /* CommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCBEB5F2AA7597700B4134E /* CommitCell.swift */; };
+		FFD49B5E2ABF223600DF2F04 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FFD49B5D2ABF223600DF2F04 /* Lottie */; };
+		FFD49B612ABF294F00DF2F04 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = FFD49B602ABF294F00DF2F04 /* SwiftSoup */; };
 		FFD9BC1D2AAFEF490020D059 /* RandomSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9BC1C2AAFEF490020D059 /* RandomSelectionVC.swift */; };
 		FFD9BC222AAFF2D50020D059 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9BC212AAFF2D50020D059 /* Json.swift */; };
 		FFD9BC242AAFF35C0020D059 /* randombox.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC232AAFF35C0020D059 /* randombox.json */; };
@@ -82,7 +84,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCBEB5A2AA7446D00B4134E /* SwiftyJSON in Frameworks */,
+				FFD49B612ABF294F00DF2F04 /* SwiftSoup in Frameworks */,
 				FFCBEB572AA7444000B4134E /* Alamofire in Frameworks */,
+				FFD49B5E2ABF223600DF2F04 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 			children = (
 				FF6F08CE2A9FADAC0021DBCD /* Let's_Git_It */,
 				FF6F08CD2A9FADAC0021DBCD /* Products */,
+				FFD49B5C2ABF223600DF2F04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,6 +308,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FFD49B5C2ABF223600DF2F04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,6 +334,8 @@
 			packageProductDependencies = (
 				FFCBEB562AA7444000B4134E /* Alamofire */,
 				FFCBEB592AA7446D00B4134E /* SwiftyJSON */,
+				FFD49B5D2ABF223600DF2F04 /* Lottie */,
+				FFD49B602ABF294F00DF2F04 /* SwiftSoup */,
 			);
 			productName = "Let's_Git_It";
 			productReference = FF6F08CC2A9FADAC0021DBCD /* Let's_Git_It.app */;
@@ -355,6 +369,7 @@
 				FFCBEB552AA7444000B4134E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FFCBEB582AA7446D00B4134E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				FFD9BC202AAFF1FC0020D059 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				FFD49B5F2ABF294F00DF2F04 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = FF6F08CD2A9FADAC0021DBCD /* Products */;
 			projectDirPath = "";
@@ -564,6 +579,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,6 +608,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -645,6 +662,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		FFD49B5F2ABF294F00DF2F04 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.1;
+			};
+		};
 		FFD9BC202AAFF1FC0020D059 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -665,6 +690,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FFCBEB582AA7446D00B4134E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		FFD49B5D2ABF223600DF2F04 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFD9BC202AAFF1FC0020D059 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		FFD49B602ABF294F00DF2F04 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFD49B5F2ABF294F00DF2F04 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
