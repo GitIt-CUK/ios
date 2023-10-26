@@ -11,10 +11,11 @@ enum ItemType {
     
 }
 let itemsColors : [ItemType : [String]] = [
-    .normal: ["DEE0E1","B5BAF3","7A83EA","4E5AE3","2332DB"],
-    .special: ["DEE0E1","F9D2BB","F5B38C","F0945E","EC752F"],
-    .rare: ["DEE0E1","F1A2AF","EA7689","E34A64","D92140"],
-    .elite: ["DEE0E1","B4EEFF","F3BE4C","FF7D93","BA6BC7"],
+    .basic: ["161C22","114429","216D32","37A641","48D353"],
+    .normal: ["161C22","B5BAF3","7A83EA","4E5AE3","2332DB"],
+    .special: ["161C22","F9D2BB","F5B38C","F0945E","EC752F"],
+    .rare: ["161C22","F1A2AF","EA7689","E34A64","D92140"],
+    .elite: ["161C22","B4EEFF","F3BE4C","FF7D93","BA6BC7"],
 ]
 func generateRandomItemRarilty() -> ItemType {
     let randomValue = Int.random(in: 1...100)

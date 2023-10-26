@@ -7,21 +7,25 @@ class CommitCell: UICollectionViewCell {
                 backgroundColor = UIColor.clear
                 return
             }
-
+            
+            let colors = itemsColors[.rare] ?? []
+            
             switch commitCount {
             case 1:
-                backgroundColor = UIColor(hex: "#114429")
+                backgroundColor = hexStringToUIColor(colors[1])
             case 2:
-                backgroundColor = UIColor(hex: "#216D32")
+                backgroundColor = hexStringToUIColor(colors[2])
             case 3:
-                backgroundColor = UIColor(hex: "#37A641")
+                backgroundColor = hexStringToUIColor(colors[3])
             case 4...:
-                backgroundColor = UIColor(hex: "#48D353")
+                backgroundColor = hexStringToUIColor(colors[4])
             default:
-                backgroundColor = UIColor(hex: "#161C22")            }
+                backgroundColor = hexStringToUIColor(colors[0])
+            }
         }
     }
 }
+
 
 // UIColor 확장을 통해 Hex 문자열을 UIColor로 변환
 extension UIColor {

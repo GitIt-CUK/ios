@@ -27,7 +27,6 @@ class LoginVC: UIViewController {
            if let url = URL(string: authURL) {
             safariViewController = SFSafariViewController(url: url)
                present(safariViewController!, animated: true, completion: nil)
-              // UIApplication.shared.open(url)
            }
        }
     func handleGitHubCallback(url: URL) {
@@ -46,7 +45,6 @@ class LoginVC: UIViewController {
                 self.view.window?.rootViewController = tabBarController
                 self.view.window?.makeKeyAndVisible()
             }
-
             sendAuthorizationCodeToServer(code: code)
         })
     }

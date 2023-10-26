@@ -12,7 +12,6 @@ import SafariServices
 func sendAuthorizationCodeToServer(code: String) {
     UserDefaults.standard.set(true, forKey: "isLoggedIn")
     UserDefaults.standard.synchronize()
-    
     let serverURL = "https://localhost:8080/auth"  // 서버의 주소
     let parameters: [String: Any] = [
         "code": code
