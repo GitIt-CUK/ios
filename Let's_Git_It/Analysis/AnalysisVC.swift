@@ -1,29 +1,32 @@
-//
-//  AnalysisVC.swift
-//  Let's_Git_It
-//
-//  Created by 김정원 on 10/26/23.
-//
-
+import SwiftUI
 import UIKit
 
-class AnalysisVC: UIViewController {
-
+class AnalysisViewController: UIViewController {
+    private var hostingController: UIHostingController<AnalysisView>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // SwiftUI 뷰를 호스팅하는 UIHostingController 인스턴스 생성
+        let swiftUIView = AnalysisView()
+        hostingController = UIHostingController(rootView: swiftUIView)
+        
+        guard let hostingControllerView = hostingController?.view else { return }
+        
+        // 호스팅 컨트롤러를 현재 뷰 컨트롤러의 자식으로 추가
+        addChild(hostingController!)
+        view.addSubview(hostingControllerView)
+        
+        hostingControllerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // 호스팅 컨트롤러 뷰의 제약조건 설정
+        NSLayoutConstraint.activate([
+            hostingControllerView.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingControllerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            hostingControllerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingControllerView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        hostingController?.didMove(toParent: self)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

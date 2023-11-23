@@ -11,6 +11,11 @@ import SwiftyJSON
 import SwiftSoup
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
+    @IBOutlet weak var consecutiveCommitLabel: UILabel!
+    @IBOutlet weak var weekCommitLabel: UILabel!
+    @IBOutlet weak var todayCommitLabel: UILabel!
     let numberOfDaysInYear = 371
     let numberOfSections = 1
     let numberOfDaysInWeek = 7
@@ -78,7 +83,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     }
                 }
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.commitDataArray = commitDataDict.map { CommitData(date: $0.key, commitCount: $0.value) }
                     self.commitDataArray.sort(by: { $0.date < $1.date })
                     
@@ -106,10 +111,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     if xOffset > 0 {
                         self.collectionView.setContentOffset(CGPoint(x: xOffset, y: 0), animated: false)
                     }
-
-                    print("Today's commits: \(self.todayCommits)")
-                    print("Last week's commits: \(self.lastWeekCommits)")
-                    print("Consecutive days of commits: \(self.consecutiveDaysCommits)")
+                    self.todayCommitLabel.text = "\(todayCommits)개"
+                    self.weekCommitLabel.text = "\(lastWeekCommits)개"
+                    self.consecutiveCommitLabel.text = "\(consecutiveDaysCommits)개"
                 }
 
                 

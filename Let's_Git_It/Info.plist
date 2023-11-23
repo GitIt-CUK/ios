@@ -13,7 +13,7 @@
 			<string>pr.Let-s-Git-It</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>myapp</string>
+				<string>gitit</string>
 			</array>
 		</dict>
 		<dict/>

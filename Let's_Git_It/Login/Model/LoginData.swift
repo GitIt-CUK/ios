@@ -8,26 +8,64 @@ import Foundation
 import Alamofire
 import UIKit
 import SafariServices
+import KeychainAccess
 
-func sendAuthorizationCodeToServer(code: String) {
-    UserDefaults.standard.set(true, forKey: "isLoggedIn")
-    UserDefaults.standard.synchronize()
-    let serverURL = "https://localhost:8080/auth"  // 서버의 주소
-    let parameters: [String: Any] = [
-        "code": code
-    ]
-    
-    AF.request(serverURL, method: .post, parameters: parameters).response { response in
-        switch response.result {
-        case .success:
-            print("Success: \(String(describing: response.value))")
-            // 여기에서 응답 데이터를 처리할 수 있습니다. 예를 들어 JSON 형태의 응답을 파싱하는 등의 작업을 할 수 있습니다.
-            
-        case .failure(let error):
-            print("Error: \(error)")
-        }
+class KeychainManager {
+    static let shared = KeychainManager()
+    private let accessTokenKey = "AccessToken"
+    private let refreshTokenKey = "RefreshToken"
+
+    private init() {}
+
+    func saveAccessToken(_ token: String) {
+        save(key: accessTokenKey, value: token)
+    }
+
+    func getAccessToken() -> String? {
+        return get(key: accessTokenKey)
+    }
+
+    func saveRefreshToken(_ token: String) {
+        save(key: refreshTokenKey, value: token)
+    }
+
+    func getRefreshToken() -> String? {
+        return get(key: refreshTokenKey)
     }
 }
+
+func save(key: String, value: String) {
+    let query = [
+        kSecClass as String: kSecClassGenericPassword as String,
+        kSecAttrAccount as String: key,
+        kSecValueData as String: value.data(using: .utf8)!
+    ] as [String: Any]
+
+    SecItemDelete(query as CFDictionary)
+    SecItemAdd(query as CFDictionary, nil)
+}
+func get(key: String) -> String? {
+    let query = [
+        kSecClass as String: kSecClassGenericPassword,
+        kSecAttrAccount as String: key,
+        kSecReturnData as String: kCFBooleanTrue!,
+        kSecMatchLimit as String: kSecMatchLimitOne
+    ] as [String: Any]
+
+    var dataTypeRef: AnyObject?
+    let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+
+    if status == noErr {
+        if let retrievedData = dataTypeRef as? Data,
+           let value = String(data: retrievedData, encoding: .utf8) {
+            return value
+        }
+    }
+    return nil
+}
+
+
+
 func logout(_ controller: UIViewController) {
     
     // 2. 앱에서의 세션 데이터 제거

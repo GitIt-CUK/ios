@@ -17,8 +17,10 @@
 		FF6F08DC2A9FADAD0021DBCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6F08DA2A9FADAD0021DBCD /* LaunchScreen.storyboard */; };
 		FF6F08E72A9FBE9A0021DBCD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6F08E62A9FBE9A0021DBCD /* Font.swift */; };
 		FF6F08EB2AA049730021DBCD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6F08EA2AA049730021DBCD /* Login.storyboard */; };
-		FF85A4192AC7EBF600B1A1FF /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85A4182AC7EBF600B1A1FF /* AnalyzeViewController.swift */; };
-		FF85A41B2AC7EC2900B1A1FF /* AnalyzeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85A41A2AC7EC2900B1A1FF /* AnalyzeData.swift */; };
+		FF7216BF2AEA09770092E7EE /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7216BE2AEA09770092E7EE /* AnalysisView.swift */; };
+		FF7216C12AEA0A550092E7EE /* AnalysisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7216C02AEA0A550092E7EE /* AnalysisVC.swift */; };
+		FF7216C82AEA21AE0092E7EE /* AnalysisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7216C72AEA21AE0092E7EE /* AnalysisData.swift */; };
+		FF7216CE2AEA2BFA0092E7EE /* sd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7216CD2AEA2BFA0092E7EE /* sd.swift */; };
 		FFAF5F072AAD5C9800D41BFE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF5F062AAD5C9800D41BFE /* LoginVC.swift */; };
 		FFAF5F092AAD5CAE00D41BFE /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF5F082AAD5CAE00D41BFE /* LoginData.swift */; };
 		FFCBEB572AA7444000B4134E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FFCBEB562AA7444000B4134E /* Alamofire */; };
@@ -41,8 +43,11 @@
 		FFD9BC382AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC332AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf */; };
 		FFD9BC3A2AB046090020D059 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9BC392AB046090020D059 /* ColorData.swift */; };
 		FFD9BC3C2AB0821D0020D059 /* box.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC3B2AB0821D0020D059 /* box.json */; };
-		FFD9BC3E2AB083420020D059 /* congratuations.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC3D2AB083420020D059 /* congratuations.json */; };
 		FFD9BC402AB0878A0020D059 /* tear.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD9BC3F2AB0878A0020D059 /* tear.json */; };
+		FFEE0D8D2B0E103F0090C1FE /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FFEE0D8C2B0E103F0090C1FE /* KakaoSDKAuth */; };
+		FFEE0D932B0E103F0090C1FE /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = FFEE0D922B0E103F0090C1FE /* KakaoSDKCommon */; };
+		FFEE0DA12B0E103F0090C1FE /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = FFEE0DA02B0E103F0090C1FE /* KakaoSDKUser */; };
+		FFEE0DAB2B0E4BA80090C1FE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FFEE0DAA2B0E4BA80090C1FE /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +63,10 @@
 		FF6F08DD2A9FADAD0021DBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF6F08E62A9FBE9A0021DBCD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FF6F08EA2AA049730021DBCD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		FF85A4182AC7EBF600B1A1FF /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
-		FF85A41A2AC7EC2900B1A1FF /* AnalyzeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeData.swift; sourceTree = "<group>"; };
+		FF7216BE2AEA09770092E7EE /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
+		FF7216C02AEA0A550092E7EE /* AnalysisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisVC.swift; sourceTree = "<group>"; };
+		FF7216C72AEA21AE0092E7EE /* AnalysisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisData.swift; sourceTree = "<group>"; };
+		FF7216CD2AEA2BFA0092E7EE /* sd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sd.swift; sourceTree = "<group>"; };
 		FFAF5F062AAD5C9800D41BFE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FFAF5F082AAD5CAE00D41BFE /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		FFCBEB5B2AA744A700B4134E /* githubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubData.swift; sourceTree = "<group>"; };
@@ -78,7 +85,6 @@
 		FFD9BC332AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Hv.otf"; sourceTree = "<group>"; };
 		FFD9BC392AB046090020D059 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 		FFD9BC3B2AB0821D0020D059 /* box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = box.json; sourceTree = "<group>"; };
-		FFD9BC3D2AB083420020D059 /* congratuations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratuations.json; sourceTree = "<group>"; };
 		FFD9BC3F2AB0878A0020D059 /* tear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tear.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,9 +94,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCBEB5A2AA7446D00B4134E /* SwiftyJSON in Frameworks */,
+				FFEE0DA12B0E103F0090C1FE /* KakaoSDKUser in Frameworks */,
 				FFD49B612ABF294F00DF2F04 /* SwiftSoup in Frameworks */,
+				FFEE0D932B0E103F0090C1FE /* KakaoSDKCommon in Frameworks */,
+				FFEE0DAB2B0E4BA80090C1FE /* KeychainAccess in Frameworks */,
 				FFCBEB572AA7444000B4134E /* Alamofire in Frameworks */,
 				FFD49B5E2ABF223600DF2F04 /* Lottie in Frameworks */,
+				FFEE0D8D2B0E103F0090C1FE /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +129,7 @@
 			children = (
 				FFCBEB4F2AA72B2700B4134E /* Login */,
 				FFCBEB402AA72A0C00B4134E /* Profile */,
-				FFCBEB3F2AA729E200B4134E /* Growth */,
+				FFCBEB3F2AA729E200B4134E /* Analysis */,
 				FFCBEB3E2AA729DA00B4134E /* Ranking */,
 				FFCBEB3D2AA729D500B4134E /* Home */,
 				FF6F08E32A9FBD980021DBCD /* Font */,
@@ -165,14 +175,14 @@
 			path = Ranking;
 			sourceTree = "<group>";
 		};
-		FFCBEB3F2AA729E200B4134E /* Growth */ = {
+		FFCBEB3F2AA729E200B4134E /* Analysis */ = {
 			isa = PBXGroup;
 			children = (
 				FFCBEB4A2AA72B0000B4134E /* Model */,
-				FFCBEB492AA72AFB00B4134E /* View */,
-				FFCBEB472AA72AEE00B4134E /* Controller */,
+				FFCBEB492AA72AFB00B4134E /* ModelView */,
+				FF7216C02AEA0A550092E7EE /* AnalysisVC.swift */,
 			);
-			path = Growth;
+			path = Analysis;
 			sourceTree = "<group>";
 		};
 		FFCBEB402AA72A0C00B4134E /* Profile */ = {
@@ -226,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				FFD9BC232AAFF35C0020D059 /* randombox.json */,
-				FFD9BC3D2AB083420020D059 /* congratuations.json */,
 				FFD9BC3F2AB0878A0020D059 /* tear.json */,
 				FFD9BC3B2AB0821D0020D059 /* box.json */,
 				FFD9BC2A2AB0346C0020D059 /* selection.json */,
@@ -236,25 +245,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FFCBEB472AA72AEE00B4134E /* Controller */ = {
+		FFCBEB492AA72AFB00B4134E /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
-				FF85A4182AC7EBF600B1A1FF /* AnalyzeViewController.swift */,
+				FF7216BE2AEA09770092E7EE /* AnalysisView.swift */,
+				FF7216CD2AEA2BFA0092E7EE /* sd.swift */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		FFCBEB492AA72AFB00B4134E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 		FFCBEB4A2AA72B0000B4134E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FF85A41A2AC7EC2900B1A1FF /* AnalyzeData.swift */,
+				FF7216C72AEA21AE0092E7EE /* AnalysisData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +345,10 @@
 				FFCBEB592AA7446D00B4134E /* SwiftyJSON */,
 				FFD49B5D2ABF223600DF2F04 /* Lottie */,
 				FFD49B602ABF294F00DF2F04 /* SwiftSoup */,
+				FFEE0D8C2B0E103F0090C1FE /* KakaoSDKAuth */,
+				FFEE0D922B0E103F0090C1FE /* KakaoSDKCommon */,
+				FFEE0DA02B0E103F0090C1FE /* KakaoSDKUser */,
+				FFEE0DAA2B0E4BA80090C1FE /* KeychainAccess */,
 			);
 			productName = "Let's_Git_It";
 			productReference = FF6F08CC2A9FADAC0021DBCD /* Let's_Git_It.app */;
@@ -376,6 +383,8 @@
 				FFCBEB582AA7446D00B4134E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				FFD9BC202AAFF1FC0020D059 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				FFD49B5F2ABF294F00DF2F04 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				FFEE0D892B0E103F0090C1FE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				FFEE0DA92B0E4BA80090C1FE /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = FF6F08CD2A9FADAC0021DBCD /* Products */;
 			projectDirPath = "";
@@ -391,7 +400,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD9BC3E2AB083420020D059 /* congratuations.json in Resources */,
 				FFD9BC2B2AB0346C0020D059 /* selection.json in Resources */,
 				FFD9BC402AB0878A0020D059 /* tear.json in Resources */,
 				FF6F08EB2AA049730021DBCD /* Login.storyboard in Resources */,
@@ -416,20 +424,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF7216CE2AEA2BFA0092E7EE /* sd.swift in Sources */,
 				FF65AF162AAE0823003F7269 /* TabVC.swift in Sources */,
 				FF6F08E72A9FBE9A0021DBCD /* Font.swift in Sources */,
-				FF85A41B2AC7EC2900B1A1FF /* AnalyzeData.swift in Sources */,
 				FFD9BC3A2AB046090020D059 /* ColorData.swift in Sources */,
 				FFD9BC1D2AAFEF490020D059 /* RandomSelectionVC.swift in Sources */,
 				FFD9BC292AB030830020D059 /* RandomVC.swift in Sources */,
+				FF7216C12AEA0A550092E7EE /* AnalysisVC.swift in Sources */,
 				FF6F08D42A9FADAC0021DBCD /* ViewController.swift in Sources */,
 				FFAF5F092AAD5CAE00D41BFE /* LoginData.swift in Sources */,
 				FFAF5F072AAD5C9800D41BFE /* LoginVC.swift in Sources */,
+				FF7216C82AEA21AE0092E7EE /* AnalysisData.swift in Sources */,
 				FFCBEB5E2AA756FB00B4134E /* CommitData.swift in Sources */,
-				FF85A4192AC7EBF600B1A1FF /* AnalyzeViewController.swift in Sources */,
 				FF6F08D02A9FADAC0021DBCD /* AppDelegate.swift in Sources */,
 				FFCBEB602AA7597700B4134E /* CommitCell.swift in Sources */,
 				FFCBEB5C2AA744A700B4134E /* githubData.swift in Sources */,
+				FF7216BF2AEA09770092E7EE /* AnalysisView.swift in Sources */,
 				FF65AF182AAE0913003F7269 /* ProfileVC.swift in Sources */,
 				FFD9BC222AAFF2D50020D059 /* Json.swift in Sources */,
 				FF6F08D22A9FADAC0021DBCD /* SceneDelegate.swift in Sources */,
@@ -508,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -562,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -686,6 +696,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		FFEE0D892B0E103F0090C1FE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.19.0;
+			};
+		};
+		FFEE0DA92B0E4BA80090C1FE /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -708,6 +734,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FFD49B5F2ABF294F00DF2F04 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		FFEE0D8C2B0E103F0090C1FE /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFEE0D892B0E103F0090C1FE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		FFEE0D922B0E103F0090C1FE /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFEE0D892B0E103F0090C1FE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		FFEE0DA02B0E103F0090C1FE /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFEE0D892B0E103F0090C1FE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		FFEE0DAA2B0E4BA80090C1FE /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFEE0DA92B0E4BA80090C1FE /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

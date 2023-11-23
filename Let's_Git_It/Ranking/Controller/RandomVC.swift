@@ -34,41 +34,12 @@ class RandomVC: UIViewController {
             gradeLabel.text = "Special"
         case .rare :
             gradeLabel.text = "Rare"
-            congratuationsView = .init(name: "congratuations")
-            conView()
         case .elite :
             gradeLabel.text = "Elite"
-            congratuationsView = .init(name: "tear")
-            conView()
         default:
             break
         }
         
-    }
-    func conView() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            
-            
-            guard let congratuationsView = self.congratuationsView else { return }
-            
-            // animationView와 같은 프레임으로 설정
-            congratuationsView.frame = self.uiView.frame
-            
-            // animationView의 속성과 동일하게 설정
-            congratuationsView.contentMode = .scaleAspectFit
-            congratuationsView.loopMode = .loop
-            congratuationsView.animationSpeed = 1.0
-            
-            self.view.insertSubview(congratuationsView, aboveSubview: self.uiView)
-
-            // 애니메이션 시작
-            congratuationsView.play()
-            
-            // 필요하다면 애니메이션이 끝난 후 congratuationsView를 숨길 수 있습니다.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                        congratuationsView.isHidden = true
-                    }
-        }
     }
     @IBOutlet weak var color1: UIImageView!
     @IBOutlet weak var color2: UIImageView!
