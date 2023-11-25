@@ -11,6 +11,8 @@ import SwiftyJSON
 import SwiftSoup
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
     @IBOutlet weak var consecutiveCommitLabel: UILabel!
     @IBOutlet weak var weekCommitLabel: UILabel!
     @IBOutlet weak var todayCommitLabel: UILabel!
@@ -28,6 +30,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             collectionView.reloadData()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -83,6 +86,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 DispatchQueue.main.async { [self] in
                     self.commitDataArray = commitDataDict.map { CommitData(date: $0.key, commitCount: $0.value) }
                     self.commitDataArray.sort(by: { $0.date < $1.date })
+                    
                     // 오늘의 커밋 횟수 계산
                     if let todayData = self.commitDataArray.last {
                         self.todayCommits = todayData.commitCount
