@@ -58,7 +58,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "CLIENT_ID"
-            value = "9323cc3c58d996fc1332"
+            value = "eb6a1f3d6c3cb22bb709"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
@@ -67,8 +67,8 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "CLIENT_SECRET"
-            value = "9fcc451ca42d60ed7e82b3a13c8492e62289c92d"
+            key = "REDIRECT_URI"
+            value = "gitit://callback"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

@@ -1036,7 +1036,7 @@
         <!--TabVC-->
         <scene sceneID="HoS-fK-npn">
             <objects>
-                <tabBarController storyboardIdentifier="TabVC" automaticallyAdjustsScrollViewInsets="NO" id="DXO-M5-fmh" customClass="TabVC" customModule="Let_s_Git_It" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DXO-M5-fmh" customClass="TabVC" customModule="Let_s_Git_It" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e6Q-wt-T39">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

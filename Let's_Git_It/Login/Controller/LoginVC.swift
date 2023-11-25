@@ -7,103 +7,78 @@
 // refresh token = 3일 => 없어지면 로그인 다시해야함
 // 자동로그인 하는 방법을 생각해야함 -> rtk 가 지나도 자동로그인 되어야함
 import UIKit
-import SafariServices
 import Alamofire
-struct API {
-    static let BASE_URL = ProcessInfo.processInfo.environment["BASE_URL"]!
-    static let CLIENT_ID = ProcessInfo.processInfo.environment["CLIENT_ID"]
-    static let CLIENT_SECRET = ProcessInfo.processInfo.environment["CLIENT_SECRET"]
-}
+import WebKit
 
-
-class LoginVC: UIViewController {
+class LoginVC: UIViewController,WKNavigationDelegate {
+    var webView : WKWebView!
     
     let redirectURI = "gitit://callback"
-    var safariViewController: SFSafariViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // setupWebView()
         
-        // Do any additional setup after loading the view.
     }
-    @IBAction func loginWithGitHub(_ sender: UIButton) {
-        // 1. GitHub OAuth 인증 페이지를 띄우기 위한 URL 생성
-        let authURL = "https://github.com/login/oauth/authorize?client_id=\(API.CLIENT_ID!)&redirect_uri=\(redirectURI)&scope=user"
-        
-        // 2. SFSafariViewController를 사용하여 GitHub OAuth 페이지를 띄우기
-        if let url = URL(string: authURL) {
-            safariViewController = SFSafariViewController(url: url)
-            present(safariViewController!, animated: true, completion: nil)
+    func setupWebView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.navigationDelegate = self
+        view.addSubview(webView)
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            webView.topAnchor.constraint(equalTo: view.topAnchor),
+            webView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            webView.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
+    }
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let url = navigationAction.request.url, url.scheme == "gitit" {
+            handleGitHubCallback(url: url)
+            decisionHandler(.cancel)
+        } else {
+            decisionHandler(.allow)
         }
     }
+    
+    @IBAction func loginWithGitHub(_ sender: UIButton) {
+        setupWebView()
+        let authURL = "https://github.com/login/oauth/authorize?client_id=\(API.CLIENT_ID!)&redirect_uri=\(API.REDIRECT_URI!)&scope=user"
+        if let url = URL(string: authURL) {
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
+    }
+    
     func handleGitHubCallback(url: URL) {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
               let code = components.queryItems?.first(where: { $0.name == "code" })?.value else {
             return
         }
-        safariViewController?.dismiss(animated: true, completion: {
-            self.sendAuthorizationCodeToServer(code: code)
-            print("Received authorization code: \(code)")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            // TabBarController를 인스턴스화
-            if let tabBarController = storyboard.instantiateViewController(identifier: "TabVC") as? UITabBarController {
-                // 현재 윈도우의 루트 뷰 컨트롤러로 설정
-                self.view.window?.rootViewController = tabBarController
-                self.view.window?.makeKeyAndVisible()
-            }
-            
-        })
-    }
-    func sendAuthorizationCodeToServer(code: String) {
-        let parameters: Parameters = [
-            "client_id": API.CLIENT_ID!,
-            "client_secret": API.CLIENT_SECRET!,
-            "code": code,
-            "redirect_uri": redirectURI
-        ]
-        
-        AF.request("https://github.com/login/oauth/access_token", method: .post, parameters: parameters, encoding: URLEncoding.httpBody).responseString { response in
-            switch response.result {
-            case .success(let value):
-                if let accessToken = self.extractToken(from: value),
-                   let refreshToken = self.extractToken(from: value) {
-                    KeychainManager.shared.saveAccessToken(accessToken)
-                    KeychainManager.shared.saveRefreshToken(refreshToken)
-                    // 성공적으로 토큰 저장 후 메인 화면 표시
-                    self.showMainScreen()
-                }
-            case .failure(let error):
-                print("Error: \(error.localizedDescription)")
-                // 에러 처리
+        // Authorization Code를 서버에 전송
+        LoginService.shared.sendAuthorizationCodeToServer(code: code) { [weak self] success,response in
+            if success,let response = response {
+                print("Auth code :\(code)")
+                // 성공 시 메인 화면으로 이동
+                self?.showMainScreen()
+            } else {
+                // 실패 시 오류 처리
+                // ...
             }
         }
     }
-    private func extractToken(from responseString: String) -> String? {
-        let components = responseString.split(separator: "&")
-            .map { $0.split(separator: "=") }
-            .filter { $0.count == 2 }
-            .reduce(into: [String: String]()) { dict, pair in
-                let key = String(pair[0])
-                let value = String(pair[1])
-                dict[key] = value
+    
+    func showMainScreen() {
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let mainTabBarController = storyboard.instantiateViewController(identifier: "TabVC") as? UITabBarController {
+                self.view.window?.rootViewController = mainTabBarController
+                self.view.window?.makeKeyAndVisible()
             }
-        
-        return components["access_token"]
+        }
     }
     
     
 }
 
-extension LoginVC {
-    func showMainScreen() {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let mainTabBarController = storyboard.instantiateViewController(identifier: "TabVC") as? UITabBarController {
-            // 현재 윈도우의 루트 뷰 컨트롤러로 메인 탭 바 컨트롤러 설정
-            view.window?.rootViewController = mainTabBarController
-            view.window?.makeKeyAndVisible()
-        }
-    }
-}
