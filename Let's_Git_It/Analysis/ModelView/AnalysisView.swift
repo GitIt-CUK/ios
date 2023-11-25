@@ -1,58 +1,6 @@
 import SwiftUI
 import Charts
 
-//struct AnalysisView: View {
-//    var body: some View {
-//        VStack {
-//            Text("사용 언어 비율")
-//                .font(Font.custom("NanumSquareNeoOTF-Bd", size: 30))
-//
-//            Chart {
-//                ForEach(LanguageData.example, id: \.language) { data in
-//                    PieMark(
-//                        center: .center,
-//                        startAngle: .degrees(0),
-//                        endAngle: .degrees(data.percentage * 360 / 100)
-//                    )
-//                    .foregroundStyle(by: .value("Language", data.language))
-//                }
-//            }
-//            .frame(height: 300)
-//        }
-//        .background(Color(hex: 0x1E1F24))
-//    }
-//}
-//
-//struct LanguageData {
-//    let language: String
-//    let percentage: Double
-//
-//    static let example = [
-//        LanguageData(language: "C", percentage: 40),
-//        LanguageData(language: "Java", percentage: 20),
-//        LanguageData(language: "Swift", percentage: 10),
-//        LanguageData(language: "Python", percentage: 30)
-//    ]
-//}
-//
-//
-//struct BarChart_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AnalysisView()
-//            //.preferredColorScheme(.white) // 미리보기에서 다크 모드로 설정
-//    }
-//}
-//extension Color {
-//    init(hex: UInt) {
-//        let red = Double((hex & 0xFF0000) >> 16) / 255.0
-//        let green = Double((hex & 0x00FF00) >> 8) / 255.0
-//        let blue = Double(hex & 0x0000FF) / 255.0
-//        self.init(red: red, green: green, blue: blue)
-//    }
-//}
-
-import SwiftUI
-
 struct AnalysisView: View {
     let data = LanguageData.example
     let colors = [Color.red, Color.green, Color.blue, Color.yellow]
