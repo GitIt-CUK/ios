@@ -42,15 +42,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         self?.showMainScreen()
                     }
                 }
-            case 605:
+          //  case 605:
                 // 리프레시 토큰이 유효하지 않을 경우, 로그인 화면으로 이동
-                DispatchQueue.main.async {
-                    self?.showLoginScreen()
-                }
+               
             default:
                 // 다른 오류가 발생한 경우, 오류 메시지를 출력하거나 사용자에게 알림
                 if let error = response.error {
                     print("Error: \(error.localizedDescription)")
+                }
+                DispatchQueue.main.async {
+                    self?.showLoginScreen()
                 }
             }
         }

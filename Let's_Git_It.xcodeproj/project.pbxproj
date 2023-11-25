@@ -48,6 +48,7 @@
 		FFEE0D932B0E103F0090C1FE /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = FFEE0D922B0E103F0090C1FE /* KakaoSDKCommon */; };
 		FFEE0DA12B0E103F0090C1FE /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = FFEE0DA02B0E103F0090C1FE /* KakaoSDKUser */; };
 		FFEE0DAB2B0E4BA80090C1FE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FFEE0DAA2B0E4BA80090C1FE /* KeychainAccess */; };
+		FFF873362B123BEC00276698 /* pie.json in Resources */ = {isa = PBXBuildFile; fileRef = FFF873352B123BEC00276698 /* pie.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		FFD9BC392AB046090020D059 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 		FFD9BC3B2AB0821D0020D059 /* box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = box.json; sourceTree = "<group>"; };
 		FFD9BC3F2AB0878A0020D059 /* tear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tear.json; sourceTree = "<group>"; };
+		FFF873352B123BEC00276698 /* pie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pie.json; path = ../../../../../Downloads/pie.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 				FFD9BC232AAFF35C0020D059 /* randombox.json */,
 				FFD9BC3F2AB0878A0020D059 /* tear.json */,
 				FFD9BC3B2AB0821D0020D059 /* box.json */,
+				FFF873352B123BEC00276698 /* pie.json */,
 				FFD9BC2A2AB0346C0020D059 /* selection.json */,
 				FFD9BC212AAFF2D50020D059 /* Json.swift */,
 				FFD9BC392AB046090020D059 /* ColorData.swift */,
@@ -408,6 +411,7 @@
 				FFD9BC2E2AB042D90020D059 /* BMJUA_otf.otf in Resources */,
 				FF6F08D72A9FADAC0021DBCD /* Main.storyboard in Resources */,
 				FFD9BC352AB043E70020D059 /* NanumSquareNeoOTF-Lt.otf in Resources */,
+				FFF873362B123BEC00276698 /* pie.json in Resources */,
 				FFD9BC342AB043E70020D059 /* NanumSquareNeoOTF-Eb.otf in Resources */,
 				FFD9BC362AB043E70020D059 /* NanumSquareNeoOTF-Rg.otf in Resources */,
 				FFD9BC382AB043E70020D059 /* NanumSquareNeoOTF-Hv.otf in Resources */,
